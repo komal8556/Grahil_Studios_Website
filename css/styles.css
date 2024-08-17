@@ -214,6 +214,7 @@ p.body-secondary {
   border: none;
   border-radius: 999px;
   font-weight: 500;
+  transition: all 300ms ease-out;
 }
 
 .cta-primary:hover {
@@ -288,13 +289,14 @@ i {
 /* CSS styling */
 /* ---------- */
 
-/* ------------------- */
-/* Landing Page Syles */
 /* ----------------- */
+/* Landing Page CSS */
+/* --------------- */
 
-.header,
+.header .container,
 .hero-section,
 .contents-below-hero-background,
+.main-content,
 .footer {
   padding-inline: 1rem;
   max-width: 1280px;
@@ -303,10 +305,19 @@ i {
 
 /* Header */
 .header {
-  height: 3.8rem;
+  /* height: 3.8rem; */
   padding-block: 1.2rem;
-  /* background-color: var(--background-dark-70);
-  backdrop-filter: blur(55px); */
+  transition: all 300ms ease-out;
+}
+
+.header.fixed-header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--background-dark-70);
+  backdrop-filter: blur(55px);
+  z-index: 99;
 }
 
 .header .container {
@@ -411,12 +422,12 @@ i {
   z-index: -1;
 }
 
-.section-heading {
+.section-heading, .about-heading {
   margin-bottom: 2.5rem;
   text-align: center;
 }
 
-.section-heading .section-title {
+.section-heading .section-title, .about-heading .about-title {
   margin-bottom: 1rem;
 }
 
@@ -440,6 +451,7 @@ i {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  transition: all 300ms ease-out;
 }
 
 .service-card:hover,
@@ -471,7 +483,11 @@ i {
 .industries-section,
 .testimonials-section,
 .faq-section,
-.contact-section {
+.contact-section,
+.about-section,
+.services-section,
+.packages-section,
+.portfolio-section {
   padding-block: 2.5rem;
 }
 
@@ -487,6 +503,7 @@ i {
   background-color: var(--dark-grey-100);
   padding: 1.5rem;
   border-radius: 1.5rem;
+  transition: all 300ms ease-out;
 }
 
 .industry-card .industry-card-texts {
@@ -511,6 +528,7 @@ i {
   background-color: var(--dark-grey-100);
   padding: 1.5rem;
   border-radius: 1.5rem;
+  transition: all 300ms ease-out;
 }
 
 .testimonial-card:hover {
@@ -533,7 +551,7 @@ i {
   background-color: var(--dark-grey-100);
   padding: 1.5rem;
   border-radius: 1.5rem;
-  transition: all 0.3s ease;
+  transition: all 300ms ease-out;
   cursor: pointer;
 }
 
@@ -605,11 +623,38 @@ i {
   text-align: center;
 }
 
+/* .BackToTop-Link{
+  position: fixed;
+  bottom: 100;
+  right: 2rem;
+  background-color: var(--background-dark);
+  color: var(--brand-gradient);
+} */
+
+
+/* --------------- */
+/* About Page CSS */
+/* ------------- */
+
+.about-section{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.about-section .about-video iframe{
+  border-radius: 1.5rem;
+}
+
+
 @media screen and (min-width: 500px) {
 
-  .header,
+
+
+  .header .container,
   .hero-section,
   .contents-below-hero-background,
+  .main-content,
   .footer {
     padding-inline: 2.5rem;
   }
@@ -622,7 +667,10 @@ i {
   .industries-section,
   .testimonials-section,
   .faq-section,
-  .contact-section {
+  .contact-section,
+  .services-section,
+.packages-section,
+.portfolio-section {
     padding-block: 4rem;
   }
 
@@ -630,7 +678,7 @@ i {
     width: auto;
   }
 
-  .section-heading {
+  .section-heading, .about-heading {
     text-align: left;
   }
 
@@ -664,6 +712,10 @@ i {
     --font-size-faq-question: 1.2rem;
     --font-size-faq-answer: 1.125rem; /* 16px - 18px */
     --font-size-testimonial: 1.25rem;
+  }
+
+  .header{
+    padding-block: 1.6rem;
   }
 
   .logo {
@@ -711,7 +763,7 @@ i {
     max-width: 52rem;
   }
 
-  .section-heading {
+  .section-heading, .about-heading {
     margin-bottom: 3rem;
   }
 
@@ -725,12 +777,18 @@ i {
   .footer {
     padding-block: 1.4rem;
   }
+
+  .about-section{
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-  .header,
+  .header .container,
   .hero-section,
   .contents-below-hero-background,
+  .main-content,
   .footer {
     padding-inline: 0;
   }
@@ -739,7 +797,11 @@ i {
   .industries-section,
   .testimonials-section,
   .faq-section,
-  .contact-section {
+  .contact-section,
+  .about-section,
+  .services-section,
+.packages-section,
+.portfolio-section {
     padding-block: 4.6rem;
   }
 
