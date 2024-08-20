@@ -646,6 +646,143 @@ i {
   border-radius: 1.5rem;
 }
 
+/* ------------------ */
+/* Services Page CSS */
+/* ---------------- */
+
+/* Services section */
+.services-section .section-heading,
+.packages-section .section-heading,
+.contact-section .section-heading{
+  text-align: left;
+}
+
+.services-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 3rem;
+}
+
+.photography-service, .videography-service, .other-services{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2.5rem;
+}
+
+.photography-service .service-texts,
+.videography-service .service-texts,
+.other-services .service-texts,
+.other-services .service-texts .editing-service,
+.other-services .service-texts .rental-service{
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.service-type-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.service-type{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.service-type ul, .rental-service ul{
+  list-style:  disc;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.20rem;
+}
+
+.service-type.background-shoot div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.photography-service .service-image,
+.videography-service .service-image,
+.other-services .service-image{
+  order: 2;
+}
+
+.service-image img{
+  min-height: 28rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.photography-img-2, .videography-img-2{
+  display: none;
+}
+
+::selection{
+  background-color: rgba(202, 208, 255, 100%);
+  color: var(--text-dark);
+}
+
+/* Packages Section */
+.packages-container{
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 1.25rem;
+}
+
+.package-box{
+  background-color: var(--dark-grey-100);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.package-box:hover{
+  background-color: var(--card-hover);
+}
+
+.package-box.highlighted{
+  border: 1px solid var(--secondary);
+}
+
+.package-heading .pricing{
+  display: flex;
+  align-items: baseline;
+  margin-top: 0.2rem;
+}
+
+.package-heading .pricing .price{
+  font-size: 2rem;
+}
+
+.package-details{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.package-details .package-detail{
+  display: flex;
+  gap: 0.375rem;
+}
+
+.package-details p,
+.package-detail p,
+.package-detail i{
+  color: var(--text-body);
+}
+
+.contact-section .contact-information .contact-info-box {
+  justify-content: left;
+  text-align: left;
+}
 
 @media screen and (min-width: 500px) {
 
@@ -782,6 +919,11 @@ i {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
+
+  .packages-container{
+    grid-template-columns: 1fr 1fr;
+   }
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -837,4 +979,41 @@ i {
     mix-blend-mode: luminosity;
     border-radius: 1.5rem;
   }
+
+.photography-service .service-texts,
+.other-services .service-texts{
+  order: 2;
+}
+
+.photography-service .service-image,
+.other-services .service-image{
+  order: 1;
+}
+
+  .services-container .photography-service,
+  .services-container .videography-service,
+  .services-container .other-services{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* .photography-img-2, .videography-img-2{
+    display: block;
+  } */
+
+  .service-image{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-image img{
+    min-height: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .packages-container{
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+
 }
