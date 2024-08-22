@@ -681,8 +681,8 @@ i {
 }
 
 .service-type ul, .rental-service ul{
-  list-style:  disc;
-  list-style-position: inside;
+  list-style:  none;
+  /* list-style-position: inside; */
   display: flex;
   flex-direction: column;
   gap: 0.20rem;
