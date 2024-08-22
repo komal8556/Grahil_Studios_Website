@@ -784,6 +784,52 @@ i {
   text-align: left;
 }
 
+/* ------------------- */
+/* Portfolio Page CSS */
+/* -----------------*/
+
+.portfolio-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.photography-works .images-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.photography-works .porfolio-type-title,
+.videography-works .porfolio-type-title{
+  margin-bottom: 2.3rem;
+}
+.photography-works .images-container img{
+  border-radius: 1.5rem;
+  mix-blend-mode: luminosity;
+}
+
+.photography-works .images-container img:hover,
+.photography-works .images-container img:focus{
+  mix-blend-mode: normal;
+}
+
+
+.videography-works .videos-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.videography-works .videos-container iframe{
+  width: 100%;
+  min-height: 32rem;
+  border-radius: 1.5rem;
+  mix-blend-mode: luminosity;
+}
+.videography-works .videos-container iframe:hover, 
+.videography-works .videos-container iframe:focus{
+  mix-blend-mode: normal;
+} 
+
 @media screen and (min-width: 500px) {
 
 
@@ -923,6 +969,15 @@ i {
   .packages-container{
     grid-template-columns: 1fr 1fr;
    }
+
+   .photography-works .images-container{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .videography-works .videos-container{
+    grid-template-columns: 1fr 1fr;
+  }
 
 }
 
