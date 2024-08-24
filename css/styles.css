@@ -226,7 +226,8 @@ p.body-secondary {
   padding-inline: 3rem;
   padding-block: 1rem;
   border: none;
-  border-radius: 999px;
+  /* border-radius: 999px; */
+  border-radius: 1rem;
   font-weight: 500;
   transition: all 300ms ease-out;
   font-family: "Syne", sans-serif;
@@ -296,9 +297,9 @@ i {
   font-size: 2.625rem;
 }
 
-.hidden {
+/* .hidden {
   display: none;
-}
+} */
 
 
 /* ------------ */
@@ -624,6 +625,7 @@ i {
   display: flex;
   align-items: center;
   padding-block: 1.125rem;
+  margin-top: clamp(2.5rem, 5vw, 6rem);
 }
 
 /* .BackToTop-Link{
@@ -751,10 +753,12 @@ i {
   background-color: var(--card-hover);
 }
 
+/*
 .package-box.highlighted{
-  /* background-color: var(--secondary);
-  color: var(--text-dark); */
-}
+  background-color: var(--secondary);
+  color: var(--text-dark); 
+} 
+*/
 
 /* .package-box.highlighted p,
 .package-box.highlighted i{
@@ -849,10 +853,51 @@ i {
   mix-blend-mode: normal;
 }  */
 
+
+/* ----------------- */
+/* Scroll animation */
+/* --------------- */
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-20%);
+  transition:  all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+/* 
+.service-card:nth-child(2), .industry-card:nth-child(2){
+  transition-delay: 200ms;
+}
+.service-card:nth-child(3), .industry-card:nth-child(3){
+  transition-delay: 400ms;
+}
+.service-card:nth-child(4), .industry-card:nth-child(4){
+  transition-delay: 600ms;
+}
+
+.industry-card:nth-child(5){
+  transition-delay: 800ms;
+}
+.industry-card:nth-child(6){
+  transition-delay: 1000ms;
+}
+.industry-card:nth-child(7){
+  transition-delay: 1200ms;
+} */
+
+
+@media(prefer-reduced-motion){
+  .hidden {
+      transition: none;
+  }
+}
+
 @media screen and (min-width: 500px) {
-
-
-
   .header .container,
   .hero-section,
   .contents-below-hero-background,
@@ -992,6 +1037,24 @@ i {
     grid-template-columns: 1fr 1fr;
   }
 
+  /* Scroll animation */
+  .service-card:nth-child(2),
+.industry-card:nth-child(2),
+.industry-card:nth-child(4),
+.industry-card:nth-child(6),
+.testimonial-card:nth-child(2),
+.contact-section .right img,
+.about-video iframe,
+.package-box:nth-child(2){
+  transition-delay: 200ms;
+}
+.service-card:nth-child(3),
+.industry-card:nth-child(3),
+.industry-card:nth-child(5),
+.package-box:nth-child(3){
+  transition-delay: 400ms;
+}
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -1077,5 +1140,18 @@ i {
     grid-template-rows: 1fr 1fr;
   }
 
+  /* scroll animation */
+  .photography-service .service-texts,
+  .videography-service .service-image,
+  .other-services .service-card-texts,
+  .photography-works .images-container img:nth-child(2),
+  .photography-works .images-container img:nth-child(5),
+  .videography-works .videos-container iframe:nth-child(2){
+    transition-delay: 200ms;
+  }
 
+  .photography-works .images-container img:nth-child(3)
+  .photography-works .images-container img:nth-child(6){
+    transition-delay: 400ms;
+  }
 }

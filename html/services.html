@@ -13,9 +13,9 @@
   <body>
     <header class="header">
       <div class="container">
-        <div>
+        <a href="/index.html" >
           <img class="logo" src="/assets/Logo.svg" alt="Grahil studio logo" />
-        </div>
+        </a>
         <nav class="navigation">
           <ul>
             <li><a href="/index.html">Home</a></li>
@@ -44,7 +44,7 @@
 
     <div class="main-content">
       <section class="services-section">
-        <div class="section-heading">
+        <div class="section-heading hidden">
           <h2 class="section-title">Our Services</h2>
           <p class="section-title-description body-primary">
             Discover the Professional Services We Offer to Bring Your Vision to
@@ -54,19 +54,14 @@
 
         <div class="services-container">
           <div class="photography-service">
-            <div class="service-image">
+            <div class="service-image hidden">
               <img
                 class="photography-img-1"
                 src="/assets/photoshoot.jpg"
-                alt=""
-              />
-              <img
-              class="photography-img-2"
-                src="/assets/photoshoot.jpg"
-                alt=""
+                alt="Close-up of a DSLR camera on a tripod, showing a product shoot preview"
               />
             </div>
-            <div class="service-texts">
+            <div class="service-texts hidden">
               <h3 class="service-title">Photography Services</h3>
               <div class="service-type-container">
                 <div class="service-type background-shoot">
@@ -105,19 +100,14 @@
             </div>
           </div>
           <div class="videography-service">
-            <div class="service-image">
+            <div class="service-image hidden">
               <img
                 class="videography-img-1"
                 src="/assets/video-recording.jpg"
-                alt=""
-              />
-              <img
-                class="videography-img-2"
-                src=""
-                alt=""
+                alt="Person holding a camera in a studio setting"
               />
             </div>
-            <div class="service-texts">
+            <div class="service-texts hidden">
               <h3 class="service-title">Videography Services</h3>
               <div class="service-type-container">
                 <div class="service-type">
@@ -159,14 +149,14 @@
             </div>
           </div>
           <div class="other-services">
-            <div class="service-image">
+            <div class="service-image hidden">
               <img
-                class="other-img"
+                class="other-img hidden"
                 src="/assets/video-editing-1.jpg"
-                alt=""
+                alt="Color grading tools on an editing software interface."
               />
             </div>
-            <div class="service-texts">
+            <div class="service-texts hidden">
               <div class="editing-service">
                 <h3 class="service-title">Editing Services</h3>
                 <div class="service-type-container">
@@ -206,7 +196,7 @@
       </section>
 
       <section class="packages-section">
-        <div class="section-heading">
+        <div class="section-heading hidden">
           <h2 class="section-title">Packages</h2>
           <p class="section-title-description body-primary">
             Tailored solutions for every need. Our packages combine essential services to provide comprehensive and cost-effective options for showcasing your products.
@@ -214,7 +204,7 @@
         </div>
 
         <div class="packages-container">
-          <div class="package-box">
+          <div class="package-box hidden">
             <div class="package-heading">
               <h6 class="title title-2">Basic</h6>
               <div class="pricing">
@@ -254,7 +244,7 @@
               </div>
             </div>
           </div>
-          <div class="package-box highlighted">
+          <div class="package-box highlighted hidden">
             <div class="package-heading">
               <h6 class="title title-2">Professional</h6>
               <div class="pricing">
@@ -294,7 +284,7 @@
               </div>
             </div>
           </div>
-          <div class="package-box">
+          <div class="package-box hidden">
             <div class="package-heading">
               <h6 class="title title-2">Enterprise</h6>
               <div class="pricing">
@@ -340,7 +330,7 @@
       <!-- Contact Section -->
       <section class="contact-section">
         <div class="left">
-          <div class="section-heading">
+          <div class="section-heading hidden">
             <h2 class="section-title">Get In Touch</h2>
             <p class="section-title-description body-primary">
               We'd love to hear from you! For inquiries or to start your
@@ -349,28 +339,26 @@
           </div>
 
           <div class="contact-information">
-            <div class="contact-info-box">
+            <div class="contact-info-box hidden">
               <i class="ri-mail-line icon-small"></i>
               <p class="contact-text">contact@grahilstudios.in</p>
             </div>
-            <div class="contact-info-box">
+            <div class="contact-info-box hidden">
               <i class="ri-phone-line icon-small"></i>
               <p class="contact-text">+91 7503500394, +91 9971270468</p>
             </div>
-            <div class="contact-info-box">
+            <div class="contact-info-box hidden">
               <i class="ri-map-pin-line icon-small"></i>
-              <p class="contact-text">
-                E-13, Pul Prehlad Pur, New Delhi - 110044
-              </p>
+              <p class="contact-text">E-13, Pul Prehlad Pur, New Delhi - 110044</p>
             </div>
-            <div class="contact-info-box">
+            <div class="contact-info-box hidden">
               <i class="ri-instagram-line icon-small"></i>
-              <p class="contact-text">@grahil_studios</p>
+              <p class="contact-text">grahil_studios</p>
             </div>
           </div>
         </div>
         <div class="right">
-          <img src="/assets/message.jpg" alt="" />
+          <img class="hidden" src="/assets/message.jpg" alt="" />
         </div>
       </section>
     </div>
@@ -385,6 +373,5 @@
   </body>
 
   <script src="/JS/index.js"></script>
-  <script src="/JS/navigation.js"></script>
-  <script src="/JS/faq.js"></script>
+  <script src="/JS/scroll-animation.js" ></script>
 </html>

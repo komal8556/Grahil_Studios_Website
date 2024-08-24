@@ -13,9 +13,9 @@
   <body>
     <header class="header">
       <div class="container">
-        <div>
+        <a href="/index.html" >
           <img class="logo" src="/assets/Logo.svg" alt="Grahil studio logo" />
-        </div>
+        </a>
         <nav class="navigation">
             <ul>
                 <li><a href="/index.html">Home</a></li>
@@ -45,8 +45,8 @@
     <div class="main-content">
       <section class="about-section">
         <div class="about-heading">
-          <h2 class="about-title ">About Us</h2>
-          <p class="about-title-description body-primary">
+          <h2 class="about-title hidden">About Us</h2>
+          <p class="about-title-description body-primary hidden">
             Grahil Studios is dedicated to capturing the essence of your story
             through stunning photography and videography. Founded with a passion
             for visual storytelling, our skilled team ensures each moment is
@@ -60,7 +60,7 @@
           </p>
         </div>
         <div class="about-video">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/M17KpgLI-dw" title="Backpack Shoot | Behind the Scene | New Suitcase Shoot | #shorts #short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>     
+            <iframe class="hidden" width="100%" height="100%" src="https://www.youtube.com/embed/M17KpgLI-dw" title="Backpack Shoot | Behind the Scene | New Suitcase Shoot | #shorts #short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>     
         </div>
       </section>
 
@@ -68,36 +68,34 @@
       <section class="contact-section">
         <div class="left">
           <div class="section-heading">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-title-description body-primary">
+            <h2 class="section-title hidden">Get In Touch</h2>
+            <p class="section-title-description body-primary hidden">
               We'd love to hear from you! For inquiries or to start your
               project, contact us via phone, email, or Instagram DM.
             </p>
           </div>
 
           <div class="contact-information">
-            <div class="contact-info-box">
+            <div class="contact-info-box hidden">
               <i class="ri-mail-line icon-small"></i>
               <p class="contact-text">contact@grahilstudios.in</p>
             </div>
-            <div class="contact-info-box">
+            <div class="contact-info-box hidden">
               <i class="ri-phone-line icon-small"></i>
               <p class="contact-text">+91 7503500394, +91 9971270468</p>
             </div>
-            <div class="contact-info-box">
+            <div class="contact-info-box hidden">
               <i class="ri-map-pin-line icon-small"></i>
-              <p class="contact-text">
-                E-13, Puli Prehlad Pur, New Delhi - 110044
-              </p>
+              <p class="contact-text">E-13, Pul Prehlad Pur, New Delhi - 110044</p>
             </div>
-            <div class="contact-info-box">
+            <div class="contact-info-box hidden">
               <i class="ri-instagram-line icon-small"></i>
-              <p class="contact-text">@grahil_studios</p>
+              <p class="contact-text">grahil_studios</p>
             </div>
           </div>
         </div>
         <div class="right">
-          <img src="/assets/message.jpg" alt="" />
+          <img class="hidden" src="/assets/message.jpg" alt="" />
         </div>
       </section>
     </div>
@@ -112,6 +110,5 @@
   </body>
 
   <script src="/JS/index.js"></script>
-  <script src="/JS/navigation.js"></script>
-  <script src="/JS/faq.js"></script>
+  <script src="/JS/scroll-animation.js" ></script>
 </html>
