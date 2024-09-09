@@ -4,20 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grahil Studios - Photography and videography Studio</title>
-
-    <meta name="description" content="Grahil Studios, based in Delhi NCR, offers professional photography, videography, editing, and equipment rental services for a diverse range of clients including e-commerce, fashion, events, real estate, corporate, podcasts, and content creators. We are committed to delivering stunning visuals for any project, and we extend our services to other states for larger projects.">
-    <meta name="keywords" content="photography, videography, editing, equipment rental, e-commerce photography, fashion photography, event photography, real estate photography, corporate videography, podcast shoots, content creator shoots, Grahil Studios, studio services, professional photography, video production, photo editing, Grahil Studios Delhi NCR">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
-    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Grahil Studios offers creative videography and photography services in Delhi NCR. From white background shoots to cinematic videos, we bring your vision to life." />
+    <meta name="keywords" content="Grahil Studios, Photography services Delhi NCR, Videography services Delhi, creative photography, cinematic videos, lifestyle shoots, product photography, Delhi photography studio" />
+    <link rel="canonical" href="https://www.grahilstudios.in/" />
+    <meta property="og:title" content="Creative Videography & Photography Services | Grahil Studios" />
+    <meta property="og:description" content="Capture your brand's essence with Grahil Studios. Specializing in lifestyle, product, and fashion shoots, we deliver high-quality visual content." />
+    <meta property="og:image" content="https://www.grahilstudios.in/assets/default-cover.png"/>
+    <meta property="og:url" content="https://www.grahilstudios.in/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Grahil Studios | Professional Photography & Videography Services in Delhi NCR"/>
+    <meta name="twitter:description" content="Grahil Studios offers expert photography and videography services, including product shoots, lifestyle photography, cinematic videos, and more. Serving Delhi NCR and beyond."/>
+    <meta name="twitter:image" content="https://www.grahilstudios.in/assets/default-cover.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Grahil Studios",
+        "description": "Photography, videography, and editing studio based in Delhi NCR.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "E-13, Pul Prehlad Pur",
+          "addressLocality": "New Delhi",
+          "postalCode": "110044",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91 7503500394",
+          "email": "info@grahilstudios.in"
+        }
+      }
+    </script>
   </head>
+
   <body>
     <div class="hero-background">
-      <video autoplay muted loop class="background-video">
+      <!-- <video autoplay muted loop class="background-video">
+        <source src="/assets/background-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video> -->
+      <video
+        autoplay
+        muted
+        loop
+        class="background-video"
+        preload="auto"
+        poster="/assets/photography-setup.jpg"
+      >
         <source src="/assets/background-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -81,6 +118,7 @@
               class="service-card-img"
               src="/assets/video-recording-camera.jpg"
               alt="Professional video camera setup for videography services, capturing high-quality footage."
+              loading="lazy"
             />
             <div class="service-card-texts">
               <h5 class="card-title title-1">Videography</h5>
@@ -97,6 +135,7 @@
               class="service-card-img"
               src="/assets/photoshoot.jpg"
               alt="Camera with a lens focused on product photography, highlighting detailed shots"
+              loading="lazy"
             />
             <div class="service-card-texts">
               <h5 class="card-title title-1">Photography</h5>
@@ -113,6 +152,7 @@
               class="service-card-img"
               src="/assets/video-editing-1.jpg"
               alt="Computer screen showing video editing software interface with color grading options."
+              loading="lazy"
             />
             <div class="service-card-texts">
               <h5 class="card-title title-1">Editing</h5>
@@ -128,6 +168,7 @@
               class="service-card-img last-img"
               src="/assets/studio.jpg"
               alt="Studio lighting and camera equipment available for rent, set up in a studio environment."
+              loading="lazy"
             />
             <div class="service-card-texts">
               <h5 class="card-title title-1">Rental</h5>
@@ -388,7 +429,10 @@
             </div>
             <div class="contact-info-box hidden">
               <i class="ri-phone-line icon-small"></i>
-              <p class="contact-text">+91 7503500394, +91 9971270468</p>
+              <p class="contact-text">
+                <a href="tel:+917503500394">+91 7503500394 </a>,
+                <a href="tel:+919971270468">+91 9971270468</a>
+              </p>
             </div>
             <div class="contact-info-box hidden">
               <i class="ri-map-pin-line icon-small"></i>

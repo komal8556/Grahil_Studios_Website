@@ -227,8 +227,8 @@ p.body-secondary {
   padding-inline: 3rem;
   padding-block: 1rem;
   border: none;
-  /* border-radius: 999px; */
-  border-radius: 1rem;
+  border-radius: 999px;
+  /* border-radius: 1rem; */
   font-weight: 500;
   transition: all 100ms ease-out;
   font-family: "Syne", sans-serif;
@@ -445,7 +445,7 @@ i {
   height: 70vh;
   width: 100vw;
   background-image:
-    linear-gradient(rgba(3, 3, 3, 40%) 0%, rgba(3, 3, 3, 40%) 100%),
+    linear-gradient(rgba(3, 3, 3, 10%) 0%, rgba(3, 3, 3, 10%) 100%),
     linear-gradient(to bottom, rgba(3, 3, 3, 70%) 0%, rgba(3, 3, 3, 100%) 80%);
   background-blend-mode: overlay, overlay;
   background-size: cover;
@@ -506,19 +506,10 @@ i {
 }
 
 .service-card .service-card-img {
-  mix-blend-mode: luminosity;
-  transition: mix-blend-mode 0.3s ease-in-out;
-  height: 100%;
-}
-
-.service-card:hover .service-card-img {
-  mix-blend-mode: normal;
-}
-
-.service-card .service-card-img {
   border-radius: 1.25rem;
   filter: brightness(1.5);
-  height: 14rem;
+  max-height: 13rem;
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
@@ -650,20 +641,15 @@ i {
   justify-content: left;
 }
 
-.contact-information .contact-info-box .contact-text {
+.contact-information .contact-info-box .contact-text, .contact-text a {
   line-height: 1.2;
   font-weight: 400;
   text-align: left;
 }
 
-/* .contact-info-box a{
-  text-decoration: underline;
-  font-weight: 500;
-} */
-
-.contact-info-box a:hover{
+/* .contact-info-box a:hover{
   color: var(--navlink-hover);
-}
+} */
 
 .contact-section .right {
   display: none;
@@ -944,16 +930,14 @@ i {
 /* Scroll animation */
 /* --------------- */
 
-/* .hidden,  */
 .show {
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
 
-.hidden{
+.hidden {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-20%);
-  /* transition:  all 1s; */
 }
 
 .show {
@@ -961,6 +945,20 @@ i {
   filter: blur(0);
   transform: translateX(0);
 }
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .show {
+    transition: none; /* Remove animations/transitions */
+  }
+
+  .hidden {
+    transform: none; /* Prevent motion */
+    opacity: 1;
+    filter: none;
+  }
+}
+
 /* 
 .service-card:nth-child(2), .industry-card:nth-child(2){
   transition-delay: 200ms;
@@ -982,12 +980,6 @@ i {
   transition-delay: 1200ms;
 } */
 
-
-@media(prefer-reduced-motion){
-  .hidden {
-      transition: none;
-  }
-}
 
 @media screen and (min-width: 500px) {
   .header .container,
@@ -1170,7 +1162,6 @@ i {
   .service-card .service-card-img {
     width: 50%;
     height: 100%;
-    max-height: 12rem;
   }
 
   .industry-cards {
