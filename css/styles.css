@@ -454,7 +454,7 @@ i {
 
 
 .hero-section .hero-title {
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
   text-align: left;
 }
 
@@ -1185,6 +1185,7 @@ i {
 
   .hero-section .hero-title {
     max-width: 52rem;
+    margin-bottom: 3.2rem;
   }
 
   .section-heading{
