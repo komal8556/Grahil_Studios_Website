@@ -259,52 +259,138 @@
       </div>
 
       <!-- Contact Section -->
-      <section id="contact-section" class="contact-section">
-        <div class="left">
-          <div class="section-heading">
-            <h2 class="section-title hidden">Get In Touch</h2>
-            <p class="section-title-description body-primary hidden">
-              We'd love to hear from you! For inquiries or to start your
-              project, contact us via phone, email, or Instagram DM.
-            </p>
-          </div>
+     <section id="contact-section" class="contact-section">
+        <div class="contact-grid">
+          <!-- Left Column: Heading + Form -->
+          <div class="left">
+            <div class="section-heading">
+              <h2 class="section-title">Request a Call Back</h2>
+              <p class="section-title-description body-primary">
+                Share your details and our team will reach out by phone to discuss your ideas.
+              </p>
+            </div>
+            <form
+              class="contact-form"
+              id="contact-form"
+              action="https://sheetdb.io/api/v1/mr4a475z2lh8f"
+              method="post"
+            >
+              <div>
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="data[Name]"
+                  id="name"
+                  placeholder="Your Name"
+                />
+                <small class="error-message" id="name-error"></small>
+              </div>
 
-          <div class="contact-information">
-            <div class="contact-info-box hidden">
-              <i class="ri-mail-line icon-small"></i>
-              <a href="mailto:info@grahilstudios.in">
-                <p class="contact-text">info@grahilstudios.in</p>
-              </a>
-            </div>
-            <div class="contact-info-box hidden">
-              <i class="ri-phone-line icon-small"></i>
-              <p class="contact-text">
-                <a href="tel:+917503500394">+91 7503500394 </a>,
-                <a href="tel:+919971270469">+91 9971270469</a>
-              </p>
-            </div>
-            <div class="contact-info-box hidden">
-              <i class="ri-map-pin-line icon-small"></i>
-              <p class="contact-text">
-                Villa No. 4, Basement No. 1, Eros Garden, Faridabad, Haryana -
-                121009
-              </p>
-            </div>
-            <div class="contact-info-box hidden">
-              <i class="ri-instagram-line icon-small"></i>
-              <a
-                href="https://www.instagram.com/grahilstudios.in"
-                target="_blank"
-              >
-                <p class="contact-text">grahil_studios</p>
-              </a>
+              <div>
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="data[Email]"
+                  id="email"
+                  placeholder="Your Email"
+                />
+                <small class="error-message" id="email-error"></small>
+              </div>
+
+              <div>
+                <label for="phone">Phone Number</label>
+                <input
+                  type="number"
+                  name="data[Phone]"
+                  id="phone"
+                  placeholder="Your Phone Number"
+                  pattern="^\d{10}$"
+                />
+                <small class="error-message" id="phone-error"></small>
+              </div>
+
+              <div>
+                <label for="message">Message</label>
+                <textarea
+                  name="data[Message]"
+                  id="message"
+                  placeholder="Your Message"
+                ></textarea>
+                <small class="error-message" id="message-error"></small>
+              </div>
+
+              <button type="submit" class="cta-primary">Send Message</button>
+            </form>
+          </div>
+          <!-- Right Column: Responsive Map -->
+          <div class="right">
+            <div class="map-container">
+              <iframe
+                class="map-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.497506787863!2d77.28703087528375!3d28.494675875740363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce756f7bd6bf9%3A0x15cdd2c6efc43d17!2sGrahil%20Studios!5e0!3m2!1sen!2sin!4v1754206121614!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Grahil Studios Location on Google Maps"
+              ></iframe>
             </div>
           </div>
         </div>
-        <div class="right">
-          <img class="hidden" src="/assets/message.jpg" alt="" />
+
+        <!-- Bottom: Info Bar -->
+        <div class="contact-info-bottom">
+          <div class="contact-info-box">
+            <i class="ri-mail-line icon-small"></i>
+            <span class="contact-text">info@grahilstudios.in</span>
+          </div>
+          <div class="contact-info-box">
+            <i class="ri-phone-line icon-small"></i>
+            <span class="contact-text">+91 7503500394, +91 9971270469</span>
+          </div>
+          <div class="contact-info-box">
+            <i class="ri-map-pin-line icon-small"></i>
+            <span class="contact-text"
+              >Villa No. 4, Basement No. 1, Eros Garden, Faridabad, Haryana -
+              121009</span
+            >
+          </div>
+          <div class="contact-info-box">
+            <i class="ri-instagram-line icon-small"></i>
+            <a class="contact-text" href="https://www.instagram.com/grahilstudios.in" target="_blank">grahilstudios.in</a>
+          </div>
         </div>
       </section>
+    </div>
+
+    <!-- Modal (hidden initially) -->
+    <div
+      id="thankyou-modal"
+      class="custom-modal"
+      tabindex="-1"
+      aria-modal="true"
+      style="display: none"
+    >
+      <div class="modal-content">
+        <span id="close-modal" class="close-btn" aria-label="Close"
+          >&times;</span
+        >
+        <h3 class="modal-title">Thank you!</h3>
+        <p class="modal-msg">
+          We’ve received your message. Our team will reach out to you very
+          soon.<br />
+          We appreciate your interest in Grahil Studios!
+        </p>
+        <button
+          id="close-modal-btn"
+          class="cta-primary"
+          style="width: auto; margin-top: 1.5rem"
+        >
+          Close
+        </button>
+      </div>
     </div>
 
     <footer class="footer">
