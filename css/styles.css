@@ -68,8 +68,8 @@ a {
   --text-body: rgba(217, 217, 217, 100%);
   --text-dark: rgba(3, 3, 3, 100%);
   --dark-grey-200: rgba(11, 11, 11, 100%);
-  --dark-grey-100: rgba(15, 15, 15, 100%);
-  --card-hover: rgba(20, 20, 20, 100%);
+  --dark-grey-100: rgb(24, 24, 24);
+  --card-hover: rgb(34, 34, 34);
   --background-dark-70: rgba(3, 3, 3, 70%);
   --navlink-hover: rgba(181, 181, 181, 100%);
 
@@ -1379,12 +1379,13 @@ i {
 .contact-form input[type="number"],
 .contact-form textarea {
   background-color: transparent;
-  border: 2px solid rgba(202, 208, 255, 80%);
+  border: 2px solid rgba(202, 208, 255, 60%);
   border-radius: 0.75rem;
   padding: var(--space-sm);
   color: var(--text-title);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  width: auto;
 }
 
 .error-message {
